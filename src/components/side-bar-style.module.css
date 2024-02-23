@@ -7,6 +7,18 @@
     background-color: #4D4F66;
     padding-top: 20px;
     color: #fff; ;
+  }
+
+  .sidebar{
     font-size: 20px;
     list-style: none;
+  }
+
+  .sidebar li:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+  .sidebar li {
+    padding: 20px;
   }
