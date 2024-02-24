@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './main-style.module.css';
 
-const MainComponent = () =>{
-
+const Suggestions = () =>{
     return (
         <div className={styles.content}>
-            <h1>Welcome to learning bite App</h1>
+            <h1>Suggested Bites for you </h1>
         </div>
     );
 }
 
-export default MainComponent;
+export default Suggestions;

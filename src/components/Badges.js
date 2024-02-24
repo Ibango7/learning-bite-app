@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './main-style.module.css';
 
-const MainComponent = () =>{
-
+const Badges = () =>{
     return (
         <div className={styles.content}>
-            <h1>Welcome to learning bite App</h1>
+            <h1>4 earned badges</h1>
         </div>
     );
 }
 
-export default MainComponent;
+export default Badges;

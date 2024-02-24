@@ -6,25 +6,41 @@ import badge from '../assets/badge.png';
 import settings from '../assets/settings.png';
 import logout from '../assets/logout.png'
 import logo from '../assets/logo_learningBite.png';
+import {Outlet, Link } from 'react-router-dom';
+
 
 
 
 const SideBar = (props) =>{
-    const icons = [home, book_suggestion, badge,settings,logout]
+    const icons = [home, book_suggestion, badge,settings,logout];
 
     const items = props.items.map((item, index) =>{
-        return <li key={index}><img className={styles.sidebarIcons} src={icons[index]} alt="icon"/> <span className={styles.sideBarText}>{item} </span></li>
+            // format link paths 
+            const formattedName = item.toLowerCase().replace(/\s+/g, '');
+        return (
+            <>
+                <li key={index}>
+                <Link className={styles.linkStyle} to={`/${formattedName}`}>
+                        <img className={styles.sidebarIcons} src={icons[index]} alt="icon"/> 
+                        <span className={styles.sideBarText}>
+                            {item}     
+                        </span>
+                </Link>
+                </li>
+            
+            </>
+        )
     });
+
+
+    
     return (
-        <>
             <div className={styles.sidebar}>
                 <div className={styles.sideBarLogo}>
                 <img src={logo}  alt='logo'/>
                 </div>
-                {items}
+                    {items}
             </div>
-        </>
-       
     );
 }
 
