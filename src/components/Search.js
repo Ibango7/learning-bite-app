@@ -4,8 +4,8 @@ import styles from './search-style.module.css'
 const Search = () =>{
 
     return (
-        <div className={styles.searchbar}>
-            <input type="text" placeholder='Title, book author'/>
+        <div className={styles.container}>
+            <input className={styles.searchbar} type="text" placeholder='Title, book author'/>
         </div>
     );
 }
