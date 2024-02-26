@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import style from '../styles/login-modal-style.module.css'
 
 const LoginModal = ({isOpen, onClose}) =>{
     const [username, setUsername] = useState('');
@@ -26,7 +27,7 @@ const LoginModal = ({isOpen, onClose}) =>{
 
     return (
         <div style={{ display: isOpen ? 'block' : 'none' }}>
-            <div className="modal">
+            <div className={style.modal}>
                 <div className="modal-content">
                 <span className="close" onClick={onClose}>&times;</span>
                 <form onSubmit={handleSubmit}>
