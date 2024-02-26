@@ -10,6 +10,7 @@ const MostPopular = (props) =>{
         {/* This data will be populated dynamically */}
         
             <div className={styles.booklist_recommend} style={{position:"relative"}}>
+            <h3 style={{textAlign:"center"}}>Popular reads</h3><br></br>
                 {/* <div className={`${styles.scrollbtn} ${styles.scrollleft}`}>&lt;</div>
                 <div className={`${styles.scrollbtn} ${styles.scrollright}`}>&gt;</div> */}
 

@@ -37,7 +37,7 @@ const Entry = () => {
                         <a href="/login">Category 3</a>
                     </div> */}
                     </div>
-                    <span onClick={openModal} style={{paddingLeft:"20px"}}>Login</span>
+                    <span onClick={openModal} style={{paddingLeft:"20px", cursor:"pointer"}}>Login</span>
                     <LoginModal isOpen={isModalOpen} onClose={closeModal}/>
                 </div>
                 </div>
