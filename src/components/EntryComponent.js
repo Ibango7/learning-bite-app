@@ -1,14 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../assets/logo_learningBite.png';
 import styles from '../styles/navbar-style.module.css'
 import Categories from './Categories';
 import Info from './Info';
+import LoginModal from './LoginModal';
 
 
 // import styles from './search-style.module.css'
 const Entry = () => { 
+    const [isModalOpen, setIsModalOPen] = useState(false);
     const categories = ['Parenting', 'Economics', 'Science', 
     'Entrepreneurship', 'Psychology', 'Exercise', 'Money&Investment', 'Health', 'Marriage'];
+
+    const openModal = () => {
+        setIsModalOPen(true);
+    } 
+
+    const closeModal = () =>{
+        setIsModalOPen(false);
+    }
+
 
     return (
         <>
@@ -26,7 +37,8 @@ const Entry = () => {
                         <a href="/login">Category 3</a>
                     </div>
                     </div>
-                    <a href="/login">Login</a>
+                    <a onClick={openModal} href="/login">Login</a>
+                    <LoginModal isOpen={isModalOpen} onClose={closeModal}/>
                 </div>
                 </div>
             </nav>

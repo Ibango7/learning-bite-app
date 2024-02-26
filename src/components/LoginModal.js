@@ -24,7 +24,7 @@ const LoginModal = ({isOpen, onClose}) =>{
         onClose();
       };
 
-      return (
+    return (
         <div style={{ display: isOpen ? 'block' : 'none' }}>
             <div className="modal">
                 <div className="modal-content">
@@ -46,3 +46,5 @@ const LoginModal = ({isOpen, onClose}) =>{
       );
 
  }
+
+ export default LoginModal;
