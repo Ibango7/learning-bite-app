@@ -19,8 +19,8 @@
     border-radius: 4px;
   }
    .categoryitem:hover {
-    color: #fff;
-    background-color: #0f1223;
+    color: #000;
+    background-color: #b1a4e5;
     cursor: pointer;
    } 
 
