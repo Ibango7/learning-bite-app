@@ -29,16 +29,17 @@ const LoginModal = ({isOpen, onClose}) =>{
         <div style={{ display: isOpen ? 'block' : 'none' }}>
             <div className={style.modal}>
                 <div className="modal-content">
-                <span className="close" onClick={onClose}>&times;</span>
+                <span className={style.close} onClick={onClose}>&times;</span>
+                    <h2>Login to learningBite</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="container">
-                    <label htmlFor="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" value={username} onChange={handleUsernameChange} required />
+                    <input type="text" id="uname" placeholder="Username" value={username} onChange={handleUsernameChange} required />
+                    <br></br>
+                    <input type="password" id="psw" placeholder="Password" value={password} onChange={handlePasswordChange} required />
 
-                    <label htmlFor="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" value={password} onChange={handlePasswordChange} required />
-
-                    <button type="submit">Login</button>
+                    <button className={style.btn} type="submit">Login</button>
+                    <p>Forgot password</p>
+                    <p>Forgot password</p>
                     </div>
                 </form>
                 </div>
