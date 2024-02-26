@@ -7,8 +7,9 @@ const Suggestions = () =>{
     return (
         <div className={styles.content}>
              <Search/>
-             <br/><br/>
+             <br/><br/><br/>
             <h1>Suggested Bites for you </h1>
+            <br/>
             <ListOfSuggestions/>
         </div>
     );
