@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './main-style.module.css';
 import Search from './Search';
+import ListOfSuggestions from './ListOfSuggestions';
 
 const Suggestions = () =>{
     return (
@@ -8,6 +9,7 @@ const Suggestions = () =>{
              <Search/>
              <br/><br/>
             <h1>Suggested Bites for you </h1>
+            <ListOfSuggestions/>
         </div>
     );
 }

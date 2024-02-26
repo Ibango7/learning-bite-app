@@ -11,10 +11,9 @@ const MainComponent = () =>{
         <div className={styles.content}>
             <Search/>
             <br/><br/>
-            <div style = {{textAlign: "center"}}>
-                <h1>My read bites</h1>
-                <ListOfReads/>
-            </div>
+            <h1>My read bites</h1>
+            <ListOfReads/>
+            
         </div>
     );
 }

@@ -7,55 +7,20 @@ const ListOfSuggestions = () =>{
     return (
         <>
         {/* This data will be populated dynamically */}
-            <div className={styles.bookcontainer}>
-
-                <div className={styles.bookimage}>
-                    <img src={placeholder} style={{height:"145px"}} alt="Book Cover"/>
-                </div>
-                <div className={styles.bookdetails}>
-                    <div className={styles.booktitle}>Book Title</div>
-                    <div className={styles.bookauthor}>Author Name</div>
-                    <div className={styles.readtime}>Read Time: 10 min</div>
-                </div>
-
-
-            </div>
-
-            <div className={styles.bookcontainer}>
-                <div className={styles.bookimage}>
-                    <img src={placeholder} style={{height:"145px"}} alt="Book Cover"/>
-                </div>
-                <div className={styles.bookdetails}>
-                    <div className={styles.booktitle}>Book Title</div>
-                    <div className={styles.bookauthor}>Author Name</div>
-                    <div className={styles.readtime}>Read Time: 10 min</div>
+            <div className={styles.booklist}>
+                <div className={`${styles.scrollbtn} ${styles.scrollleft}`}>&lt;</div>
+                <div className={`${styles.scrollbtn} ${styles.scrollright}`}>&gt;</div>
+                
+                <div className={styles.book}>
+                    <div className={styles.book_image}>
+                        <img src={placeholder} style={{height:"145px"}} alt="Book Cover"/>
+                    </div>
+                    <div className={styles.booktitle}>Book Title 1</div>
+                    <div className={styles.bookauthor}>Author Name 1</div>
+                    <div className={styles.readtime}>Read Time: 8 min</div>
                 </div>
 
             </div>
-
-            <div className={styles.bookcontainer}>
-                <div className={styles.bookimage}>
-                    <img src={placeholder} style={{height:"145px"}} alt="Book Cover"/>
-                </div>
-                <div className={styles.bookdetails}>
-                    <div className={styles.booktitle}>Book Title</div>
-                    <div className={styles.bookauthor}>Author Name</div>
-                    <div className={styles.readtime}>Read Time: 10 min</div>
-                </div>
-
-            </div>
-            <div className={styles.bookcontainer}>
-                <div className={styles.bookimage}>
-                    <img src={placeholder} style={{height:"145px"}} alt="Book Cover"/>
-                </div>
-                <div className={styles.bookdetails}>
-                    <div className={styles.booktitle}>Book Title</div>
-                    <div className={styles.bookauthor}>Author Name</div>
-                    <div className={styles.readtime}>Read Time: 10 min</div>
-                </div>
-
-            </div>
-        
         </>
         
     );
