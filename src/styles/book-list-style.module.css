@@ -1,0 +1,38 @@
+.bookcontainer {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 20px;
+  }
+
+  .bookimage {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 0;
+    margin-left: -25px;
+    
+  }
+
+  .bookdetails {
+    width: 300px;
+  }
+
+  .booktitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .bookauthor {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+  .readtime {
+    font-size: 0.9em;
+    color: #666;
+  }
