@@ -6,7 +6,7 @@ import badge from '../assets/badge.png';
 import settings from '../assets/settings.png';
 import logout from '../assets/logout.png'
 import logo from '../assets/logo_learningBite.png';
-import {Outlet, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 
 

@@ -1,0 +1,41 @@
+.categorylist {
+    display: flex;
+     flex-wrap: wrap; /*Allow items to wrap into multiple lines */
+     /* border: 1px solid green;  */
+     width: 450px;
+     margin-top: 20%;
+     position: absolute;
+     margin-right: 20px;
+     top: 0;
+     right: 0;
+  
+  }
+  
+  .categoryitem {
+    background-color: #4D4F66;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+  }
+   .categoryitem:hover {
+    color: #fff;
+    background-color: #0f1223;
+    cursor: pointer;
+   } 
+
+   .icons{
+    width:25px;
+    height:25px;
+
+   }
+
+
+  @media screen and (max-width: 768px) {
+    .categorylist {
+      position: static;
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  
