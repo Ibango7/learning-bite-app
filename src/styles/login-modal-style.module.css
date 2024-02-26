@@ -9,16 +9,13 @@
     background-color:#30324B;
     /* background-color: rgba(0, 0, 0, 0.4); Black with opacity */
     border-radius: 10px;
+   
 }
 
   
   /* Modal Content/Box */
   .modalcontent {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    margin-top: 20px;
   }
   
   /* Close Button */
@@ -50,18 +47,29 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 20px;
+    font-size: 20px;
   }
   
   .bt {
-    background-color: #616387;
-    color: black;
-    padding: 14px 20px;
     margin: 8px 0;
     border-radius:20px;
     cursor: pointer;
-    width: 100%;
+    width: 365px;
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  .btn:hover{
+    background-color: #b1a4e5;;
   }
   
+  p {
+    font-size: 20px;
+  }
+  p:hover {
+    color: #000;
+    cursor: pointer;
+  }
 
   
   

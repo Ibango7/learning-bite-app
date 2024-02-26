@@ -28,7 +28,7 @@ const LoginModal = ({isOpen, onClose}) =>{
     return (
         <div style={{ display: isOpen ? 'block' : 'none' }}>
             <div className={style.modal}>
-                <div className="modal-content">
+                <div className={style.modalcontent}>
                 <span className={style.close} onClick={onClose}>&times;</span>
                     <h2>Login to learningBite</h2>
                 <form onSubmit={handleSubmit}>
@@ -36,10 +36,9 @@ const LoginModal = ({isOpen, onClose}) =>{
                     <input type="text" id="uname" placeholder="Username" value={username} onChange={handleUsernameChange} required />
                     <br></br>
                     <input type="password" id="psw" placeholder="Password" value={password} onChange={handlePasswordChange} required />
-
-                    <button className={style.bt} type="submit">Login</button>
+                    <button className={style.bt} style={{backgroundColor:"#616387", fontSize:"20px", }} type="submit">Login</button>
                     <p>Forgot password</p>
-                    <p>Forgot password</p>
+                    <p>Don't have an account?</p>
                     </div>
                 </form>
                 </div>

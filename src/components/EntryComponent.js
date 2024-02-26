@@ -30,14 +30,14 @@ const Entry = () => {
                 <div className={styles.navbarlinks}>
                 <div className={styles.navbarlinksright}>
                     <div className={styles.dropdown}>
-                    <button className={styles.dropbtn}>Categories</button>
+                    {/* <span className={styles.dropbtn}>Categories</span>
                     <div className={styles.dropdowncontent}>
                         <a href="/login">Category 1</a>
                         <a href="/login">Category 2</a>
                         <a href="/login">Category 3</a>
+                    </div> */}
                     </div>
-                    </div>
-                    <span onClick={openModal}>Login</span>
+                    <span onClick={openModal} style={{paddingLeft:"20px"}}>Login</span>
                     <LoginModal isOpen={isModalOpen} onClose={closeModal}/>
                 </div>
                 </div>
