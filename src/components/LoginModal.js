@@ -37,7 +37,7 @@ const LoginModal = ({isOpen, onClose}) =>{
                     <br></br>
                     <input type="password" id="psw" placeholder="Password" value={password} onChange={handlePasswordChange} required />
 
-                    <button className={style.btn} type="submit">Login</button>
+                    <button className={style.bt} type="submit">Login</button>
                     <p>Forgot password</p>
                     <p>Forgot password</p>
                     </div>

@@ -25,8 +25,9 @@
   .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
+    margin-top: -28px;
   }
   
   .close:hover,
@@ -51,18 +52,16 @@
     border-radius: 20px;
   }
   
-  .btn {
-    background-color: #4CAF50;
-    color: white;
+  .bt {
+    background-color: #616387;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
+    border-radius:20px;
     cursor: pointer;
     width: 100%;
   }
   
-  button:hover {
-    opacity: 0.8;
-  }
+
   
   
