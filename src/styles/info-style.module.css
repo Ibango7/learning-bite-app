@@ -1,0 +1,19 @@
+.container {
+    width: 900px;
+    position: absolute;
+    margin-left: 80px;
+}
+
+.contentWrapper{
+    display: flex;
+}
+
+.imageFormat{
+    width:70px;
+    height: 65;
+}
+
+.content {
+    padding: 20px; 
+  }
+

@@ -71,3 +71,23 @@
   .scrollright {
     right: 0;
   }
+
+  .book_recomend{
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+  
+  }
+
+  .booklist_recommend {
+    width: 100%;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+
+    margin-top: 50px;
+    margin-left: -40px
+  }

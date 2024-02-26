@@ -17,7 +17,7 @@ const Categories = (props) => {
     const icons = [parenting, economics, science, entrepreneurship, pyschology, exercise, money, health, marriage];
     return (
         <>
-            <div style={{textAlign:"right", marginTop:"13%", marginRight: "8%" }}>
+            <div style={{textAlign:"right", marginTop:"13%", marginRight: "10%" }}>
             <h2>What are you interested in?</h2>
                 <div className={styles.categorylist}>
                     {props.categories.map((category, index) => (
@@ -25,9 +25,10 @@ const Categories = (props) => {
                         <img className={styles.icons} src={icons[index]} alt="icons"/> <span style={{background:"2px"}}>{category}</span>
                     </div>
                     ))}
+                    <MostPopular/>
                 </div>
             </div>
-            {/* <MostPopular/> */}
+
         </>
     );
 }

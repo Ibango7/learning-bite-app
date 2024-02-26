@@ -1,11 +1,9 @@
 import React from 'react'
 import logo from '../assets/logo_learningBite.png';
 import styles from '../styles/navbar-style.module.css'
-import book from '../assets/book.png';
-import read_time from '../assets/book_time.png';
-import suggestion from '../assets/suggestion.png';
 import Categories from './Categories';
-import ListOfSuggestions from './ListOfSuggestions';
+import Info from './Info';
+
 
 // import styles from './search-style.module.css'
 const Entry = () => { 
@@ -33,7 +31,7 @@ const Entry = () => {
                 </div>
             </nav>
             <Categories categories={categories}/>
-           
+            <Info/>
         </>
     
     );
