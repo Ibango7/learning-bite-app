@@ -10,8 +10,8 @@ import Badges from './components/Badges'; // badges page
 
 function App() {
   const [logged, setLogged] = useState(false);
-
   const items = ["My reads", "Suggestions", "My Badges", "Settings", "Logout"];
+
   return (
 
 
