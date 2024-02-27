@@ -30,7 +30,7 @@ const LoginModal = ({isOpen, onClose}) =>{
             <div className={style.modal}>
                 <div className={style.modalcontent}>
                 <span className={style.close} onClick={onClose}>&times;</span>
-                    <h2>Login to learningBite</h2>
+                    <h2>Login to LearningBite</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="container">
                     <input type="text" id="uname" placeholder="Username" value={username} onChange={handleUsernameChange} required />
