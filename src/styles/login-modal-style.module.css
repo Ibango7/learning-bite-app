@@ -38,7 +38,7 @@
     padding: 16px;
   }
   
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password], input[type=email] {
     width: 365px;
     height: 70px;
     padding: 12px 20px;
@@ -71,5 +71,24 @@
     cursor: pointer;
   }
 
+  .label {
+    display: block; /* Ensure each label appears on its own line */
+    font-weight: bold; /* Make the label text bold */
+    margin-bottom: 5px; /* Add some spacing between the label and the select element */
+  }
   
+  /* CSS for select */
+  .select {
+    width: 365px; 
+    padding: 8px; /* Add some padding inside the select box */
+    font-size: 16px; /* Set the font size */
+
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
   
+  /* CSS for select options */
+  .select option {
+    font-size: 16px; /* Set the font size for options */
+  }

@@ -13,8 +13,7 @@ function App() {
   const items = ["My reads", "Suggestions", "My Badges", "Settings", "Logout"];
 
   return (
-
-
+    
     <div className="App">
       {!logged ?  <Entry/> :
       
