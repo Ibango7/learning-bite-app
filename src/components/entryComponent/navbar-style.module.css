@@ -5,6 +5,7 @@
   padding: 10px 20px;
   background-color: #4D4F66;
   color: #fff;
+  min-width: 100px; /* Set a minimum width for the navbar */
 }
 
 .navbarlogo img {
@@ -33,6 +34,8 @@
   position: relative;
   display: inline-block;
 }
+
+
 
 .pageContent {
   display: flex;
