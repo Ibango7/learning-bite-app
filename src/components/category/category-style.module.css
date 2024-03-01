@@ -1,0 +1,48 @@
+.categories {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.categoryItem {
+  background-color: #4D4F66;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: calc(33.33% - 10px); /* Adjust width for 3 items in a row with gap */
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.categoryItem:hover {
+  color: #000;
+  background-color: #b1a4e5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .categoryItem {
+    width: calc(50% - 10px); /* Adjust width for 2 items in a row with gap */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categoryItem {
+    width: 100%; /* Display items in a single column */
+  }
+}

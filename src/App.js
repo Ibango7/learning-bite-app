@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import SideBar from './components/SideBar';
+import SideBar from './components/siderBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MainComponent from './components/MainComponent'; // home
-import Entry from './components/EntryComponent';
-import Suggestions from './components/Suggestions'; // recommendation page
-import Badges from './components/Badges'; // badges page
+import MainComponent from './components/mainComponent'; // home
+import Entry from './components/entryComponent';
+import Suggestions from './components/suggestions'; // recommendation page
+import Badges from './components/badges'; // badges page
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
   const items = ["My reads", "Suggestions", "My Badges", "Settings", "Logout"];
 
   return (
-    
+
     <div className="App">
       {!logged ?  <Entry/> :
       

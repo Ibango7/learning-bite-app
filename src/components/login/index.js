@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from '../styles/login-modal-style.module.css'
+import style from './login-modal-style.module.css'
 
 const LoginModal = ({isOpen, onClose}) =>{
     const [username, setUsername] = useState('');

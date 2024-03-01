@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './main-style.module.css';
-import Search from './Search';
-import ListOfReads from './ListOfReads';
+import Search from '../search';
+import ListOfReads from '../myReads';
 
 
 

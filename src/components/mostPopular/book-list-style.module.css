@@ -1,0 +1,52 @@
+.mostPopular {
+  margin-top: 30px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.bookList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bookItem {
+  width: calc(30% - 20px);
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+.bookItem:last-child {
+  margin-right: 0; /* Remove margin-right from the last item */
+}
+
+.bookImage {
+  text-align: center;
+}
+
+.bookImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bookDetails {
+  padding: 10px;
+}
+
+.bookTitle {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bookAuthor {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.readTime {
+  color: #666;
+}

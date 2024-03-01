@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './side-bar-style.module.css';
-import home from '../assets/home.png';
-import book_suggestion from '../assets/book_suggestion.png';
-import badge from '../assets/badge.png';
-import settings from '../assets/settings.png';
-import logout from '../assets/logout.png'
-import logo from '../assets/logo_learningBite.png';
+import home from '../../assets/home.png';
+import book_suggestion from '../../assets/book_suggestion.png';
+import badge from '../../assets/badge.png';
+import settings from '../../assets/settings.png';
+import logout from '../../assets/logout.png'
+import logo from '../../assets/logo_learningBite.png';
 import {Link } from 'react-router-dom';
 
 

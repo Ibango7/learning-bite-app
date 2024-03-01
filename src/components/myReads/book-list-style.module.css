@@ -1,0 +1,93 @@
+.bookcontainer {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 20px;
+  }
+
+  .bookimage {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 0;
+    margin-left: -25px;
+    
+  }
+
+  .bookdetails {
+    width: 300px;
+  }
+
+  .booktitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .bookauthor {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+  .readtime {
+    font-size: 0.9em;
+    color: #666;
+  }
+
+/* Style for book sugestions */
+
+  .booklist {
+    width: 80%;
+    margin: 20px auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    position: relative;
+  }
+  .book {
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .scrollbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .scrollleft {
+    left: 0;
+  }
+
+  .scrollright {
+    right: 0;
+  }
+
+  .book_recomend{
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px;
+    text-align: center;
+  
+  }
+
+  .booklist_recommend {
+    width: 100%;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+
+    margin-top: 50px;
+    margin-left: -40px
+  }

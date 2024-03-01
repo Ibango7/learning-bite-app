@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4D4F66;
+  color: #fff;
+}
+
+.navbarlogo img {
+  height: 220px;
+  width: 325px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbarlinks {
+  display: flex;
+}
+
+.navbarlinksright {
+  display: flex;
+  align-items: center;
+}
+
+.navbarlinksright span {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.pageContent {
+  display: flex;
+}
+
+.leftContent {
+  flex: 1;
+  padding: 20px;
+  margin-top: 280px;
+}
+
+.rightContent {
+  flex: 1;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1349px) {
+  .navbar {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pageContent {
+    flex-direction: column;
+  }
+}

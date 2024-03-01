@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './main-style.module.css';
+import styles from './style.module.css';
 
 const Badges = () =>{
     return (

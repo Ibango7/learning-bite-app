@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './main-style.module.css';
-import Search from './Search';
-import ListOfSuggestions from './ListOfSuggestions';
+import Search from '../search';
+import ListOfSuggestions from '../listOfSuggestions';
 
 const Suggestions = () =>{
     return (

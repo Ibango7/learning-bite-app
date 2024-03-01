@@ -1,0 +1,29 @@
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Add padding to center content */
+    text-align: center;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 0 0 calc(33.33% - 40px); /* Adjust width for three items in a row with padding */
+    padding: 20px;
+}
+
+.imageFormat {
+    width: 70px;
+    height: 65px; /* Add unit for height */
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        flex: 0 0 100%; /* Display items in a single column */
+    }
+}

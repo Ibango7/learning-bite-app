@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '../styles/book-list-style.module.css';
-import placeholder from '../assets/placeholder.png';
+import styles from './book-list-style.module.css';
+import placeholder from '../../assets/placeholder.png'
 
 const ListOfReads = () =>{
 
