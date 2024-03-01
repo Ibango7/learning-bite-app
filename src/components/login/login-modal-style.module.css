@@ -58,11 +58,15 @@
     cursor: pointer;
     width: 365px;
     height: 70px;
-    margin-right: 20px;
+    border: none;
+    background-color:#616387;
+    font-size: 20px;
+    color: #fff;
   }
 
-  .btn:hover{
-    background-color: #b1a4e5;;
+  .bt:hover{
+    background-color: #8c7ac0;
+    
   }
   
   p {

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import style from './login-modal-style.module.css'
+import style from './register-modal-style.module.css'
 
 const RegisterModal = ({isOpen, onClose}) =>{
     const [username, setUsername] = useState('');
@@ -64,7 +64,7 @@ const RegisterModal = ({isOpen, onClose}) =>{
                     <input type="password" id="psw" placeholder="Password" value={password} onChange={handlePasswordChange} required />
                     <input type="password" id="psw-conf" placeholder="Confirm password" value={confirmPassword} onChange={handlePasswordConfChange} required />
                     <br></br>
-                    <button className={style.bt} style={{backgroundColor:"#616387", fontSize:"20px", }} type="submit">Register</button>
+                    <button className={style.bt} type="submit">Register</button>
                     </div>
                 </form>
                 </div>

@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.navbarlinksright span:hover {
+  color: black;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
