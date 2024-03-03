@@ -5,10 +5,15 @@ import Categories from '../category';
 import Info from '../info';
 import LoginModal from '../login';
 import RegisterModal from '../register';
+import { useAuthState } from '../../providers/authProvider';
+
 
 const Entry = () => {
     const [isModalOpen, setIsModalOpen] = useState({ login: false, register: false });
     const categories = ['Parenting', 'Economics', 'Science', 'Entrepreneurship', 'Psychology', 'Exercise', 'Money&Investment', 'Health', 'Marriage'];
+    const {state, loginUser} = useAuthState(); // to trigger the login action
+
+    console.log("Current state",state);
 
     const openModal = (x) => {
         setIsModalOpen((prev) => {
@@ -34,6 +39,14 @@ const Entry = () => {
         });
     }
 
+    const handleUserAction = () =>{
+     const   User = {
+            email: "string",
+            password: "string"
+        }
+        loginUser(User);
+    }
+
     return (
         <>
             <nav className={styles.navbar}>
@@ -53,6 +66,7 @@ const Entry = () => {
             </nav>
             <div className={styles.pageContent}>
                 <div className={styles.leftContent}>
+                    <button onClick={handleUserAction}>Login direct</button>
                     <Info />
                 </div>
                 <div className={styles.rightContent}>

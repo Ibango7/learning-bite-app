@@ -6,16 +6,20 @@ import MainComponent from './components/mainComponent'; // home
 import Entry from './components/entryComponent';
 import Suggestions from './components/suggestions'; // recommendation page
 import Badges from './components/badges'; // badges page
-
+import { useAuthState } from './providers/authProvider';
 
 function App() {
-  const [logged, setLogged] = useState(false);
+  // const [logged, setLogged] = useState(false);
   const items = ["My reads", "Suggestions", "My Badges", "Settings", "Logout"];
+  const {state} = useAuthState();
+  const isLoggedIn = state.isLoggedIn;
+
+  console.log("My All state", state );
 
   return (
 
     <div className="App">
-      {!logged ?  <Entry/> :
+      {!isLoggedIn?  <Entry/> :
       
       <BrowserRouter>
       <SideBar items ={items}/>
@@ -26,7 +30,7 @@ function App() {
            <Route path ="mybadges" element={<Badges />} />
        </Routes>
      </BrowserRouter> 
-      
+     
       }
       
     </div>
