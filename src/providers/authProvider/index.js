@@ -33,7 +33,7 @@ const AuthProvider = (props) => {
             console.error('Error logging in:', error);
             console.error('An error occurred while logging in. Please try again later.');
             // message to the user
-            // throw error;
+            throw error;
         }
     };
     

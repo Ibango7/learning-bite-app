@@ -1,29 +1,48 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import style from './login-modal-style.module.css'
+import { useAuthState } from '../../providers/authProvider';
 
 const LoginModal = ({isOpen, onClose}) =>{
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {loginUser} = useAuthState(); // to trigger the login action
+    const [error, setError] = useState('');
+
+
+      /*useEffect(()=>{
+        setError('');
+          setEmail('');
+        setPassword('');
+      },[])*/
 
     const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
+      setEmail(event.target.value);
       };
 
       const handlePasswordChange = (event) => {
         setPassword(event.target.value);
       };
 
-      const handleSubmit = (event) => {
+      const handleSubmit = async (event) => {
         event.preventDefault();
-        // Add your login logic here
-        console.log('Username:', username);
-        console.log('Password:', password);
-        // You can perform your login authentication here
-        // For simplicity, I'm just logging the username and password to the console
-        // You should replace this with your actual authentication logic
-        // Once authenticated, you can close the modal
-        onClose();
-      };
+        // // Add your login logic here
+        // console.log('Username:', email);
+        // console.log('Password:', password);
+
+        const User = {
+          email,
+          password
+      }
+
+      try {
+        await loginUser(User);
+        // onClose();
+        // if login is successful
+      } catch (error){
+        setError('Invalid email or password');
+      }
+       
+    };
 
     return (
         <div style={{ display: isOpen ? 'block' : 'none' }}>
@@ -33,10 +52,11 @@ const LoginModal = ({isOpen, onClose}) =>{
                     <h2>Login to LearningBite</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="container">
-                    <input type="text" id="uname" placeholder="Username" value={username} onChange={handleUsernameChange} required />
+                    <input type="text" id="uname" placeholder="Email" value={email} onChange={handleUsernameChange} required />
                     <br></br>
                     <input type="password" id="psw" placeholder="Password" value={password} onChange={handlePasswordChange} required />
                     <button className={style.bt}  type="submit">Login</button>
+                    {error && <p style={{ color: 'green' }}>{error}</p>}
                     <p>Forgot password</p>
                     <p>Don't have an account?</p>
                     </div>
