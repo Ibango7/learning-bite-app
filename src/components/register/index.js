@@ -40,9 +40,10 @@ const RegisterModal = ({isOpen, onClose}) =>{
           sex:gender ==="male"? 0:1,
         }
 
-        // console.log("Registration object", User);
         try{
-          await registerUser(User)
+           await registerUser(User);
+           // store user information in local storage
+
            // onClose();
           // registration was successful
         }catch(error) {

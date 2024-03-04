@@ -4,28 +4,32 @@ import { authReducer } from "./reducer";
 import { loginUserAction, registerUserAction, logOutUserAction } from "./actions";
 import axios from "axios";
 
+
+
 // initial state of user
 const initialState = {
-    isLoggedIn:false
+    isLoggedIn:false,
+    user:null
 };
 
 const AuthProvider = (props) => {
     const [state, dispatch] = useReducer(authReducer, initialState);
 
     useEffect(()=>{
-    }, []);
+       
+    },[]);
 
     const registerUser = async (user) =>{
         try {
             const response =  await axios.post('https://localhost:7186/api/Users/Register',user);
-
-          
             // console.log("Staus",response);
             // check if response was ok
             if(response.status === 201){
                 // console.log("For registration",response.data);
 
                 dispatch(registerUserAction(response.data));
+                // localStorage.setItem("isLoggedIn", true);
+                localStorage.setItem('user', JSON.stringify(response.data));
                 return response.data;
             } else {
                 throw new Error('Register failed');
@@ -45,6 +49,12 @@ const AuthProvider = (props) => {
         }
     }
 
+    const logOutUser = async () =>{
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("user");
+        dispatch(logOutUserAction({}))
+    }
+
 
 
     const loginUser = async (user) => {
@@ -54,6 +64,8 @@ const AuthProvider = (props) => {
             if (response.status === 200) {
                 // Dispatch action to update state with user data
                 dispatch(loginUserAction(response.data));
+                // localStorage.setItem("isLoggedIn", true);
+                localStorage.setItem('user', JSON.stringify(response.data));
                 // Return the parsed data or any other necessary information
                 return response.data;
             } else {
@@ -70,7 +82,7 @@ const AuthProvider = (props) => {
     };
     
     return (
-        <AuthContext.Provider value= {{state, loginUser, registerUser}} >
+        <AuthContext.Provider value= {{state, loginUser, registerUser, logOutUser}} >
             {props.children}
         </AuthContext.Provider>
     )

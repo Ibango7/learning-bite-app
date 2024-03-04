@@ -32,6 +32,7 @@ const LoginModal = ({isOpen, onClose}) =>{
 
       try {
         await loginUser(User);
+
         // onClose();
         // if login is successful
       } catch (error){
