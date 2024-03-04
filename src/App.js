@@ -14,13 +14,12 @@ function App() {
   const {state} = useAuthState();
   const isLoggedIn = state.isLoggedIn;
 
-  console.log("My All state", state );
+  // console.log("My All state", state );
 
   return (
 
     <div className="App">
       {!isLoggedIn?  <Entry/> :
-      
       <BrowserRouter>
       <SideBar items ={items}/>
        <Routes>
@@ -31,7 +30,7 @@ function App() {
        </Routes>
      </BrowserRouter> 
      
-      }
+    }
       
     </div>
   );

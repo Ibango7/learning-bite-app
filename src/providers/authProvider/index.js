@@ -15,6 +15,38 @@ const AuthProvider = (props) => {
     useEffect(()=>{
     }, []);
 
+    const registerUser = async (user) =>{
+        try {
+            const response =  await axios.post('https://localhost:7186/api/Users/Register',user);
+
+          
+            // console.log("Staus",response);
+            // check if response was ok
+            if(response.status === 201){
+                // console.log("For registration",response.data);
+
+                dispatch(registerUserAction(response.data));
+                return response.data;
+            } else {
+                throw new Error('Register failed');
+            }
+
+        } catch (error){
+            // Handle any errors and re-throw
+            console.log('Error registering in:', error);
+            if (error.response) {
+                console.error('Response status:', error.response.status);
+                console.error('Response data:', error.response.data);
+            }
+            // Rethrow the error to propagate it further
+            console.log('An error occurred while refistering user. Please try again later.');
+            // message to the user
+            throw error;
+        }
+    }
+
+
+
     const loginUser = async (user) => {
         try {
             const response = await axios.post('https://localhost:7186/api/Users/login', user);
@@ -38,7 +70,7 @@ const AuthProvider = (props) => {
     };
     
     return (
-        <AuthContext.Provider value= {{state, loginUser}} >
+        <AuthContext.Provider value= {{state, loginUser, registerUser}} >
             {props.children}
         </AuthContext.Provider>
     )

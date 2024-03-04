@@ -5,13 +5,11 @@ import Categories from '../category';
 import Info from '../info';
 import LoginModal from '../login';
 import RegisterModal from '../register';
-import { useAuthState } from '../../providers/authProvider';
 
 
 const Entry = () => {
     const [isModalOpen, setIsModalOpen] = useState({ login: false, register: false });
     const categories = ['Parenting', 'Economics', 'Science', 'Entrepreneurship', 'Psychology', 'Exercise', 'Money&Investment', 'Health', 'Marriage'];
-    const {state, loginUser} = useAuthState(); // to trigger the login action
 
     // console.log("Current state",state);
 

@@ -5,7 +5,7 @@ import { useAuthState } from '../../providers/authProvider';
 const LoginModal = ({isOpen, onClose}) =>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {loginUser} = useAuthState(); // to trigger the login action
+    const {loginUser} = useAuthState(); 
     const [error, setError] = useState('');
 
 
@@ -25,10 +25,6 @@ const LoginModal = ({isOpen, onClose}) =>{
 
       const handleSubmit = async (event) => {
         event.preventDefault();
-        // // Add your login logic here
-        // console.log('Username:', email);
-        // console.log('Password:', password);
-
         const User = {
           email,
           password

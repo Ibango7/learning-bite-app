@@ -7,12 +7,5 @@ export const AuthActionEnums = {
 }
 
 export const loginUserAction = createAction(AuthActionEnums.logIn, (data)=>({data}));
-export const registerUserAction = createAction(AuthActionEnums.register, (username, sex, email, password) =>(
-    {
-        username,
-        sex,
-        email,
-        password
-    }
-))
+export const registerUserAction = createAction(AuthActionEnums.register, (data) =>({data}))
 export const logOutUserAction = createAction(AuthActionEnums.logOut)

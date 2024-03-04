@@ -1,19 +1,22 @@
 import React, {useState} from "react";
 import style from './register-modal-style.module.css'
+import { useAuthState } from '../../providers/authProvider';
 
 const RegisterModal = ({isOpen, onClose}) =>{
-    const [username, setUsername] = useState('');
+    const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] =  useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [gender, setGender] = useState('');
+    const {registerUser} = useAuthState(); 
+    const [error, setError] = useState('');
 
     const handleEmailChange = (event) =>{
         setEmail(event.target.value);
     }
-    
+
     const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
+      setName(event.target.value);
       };
 
       const handlePasswordChange = (event) => {
@@ -28,19 +31,24 @@ const RegisterModal = ({isOpen, onClose}) =>{
         setGender(event.target.value);
       }
 
-      const handleSubmit = (event) => {
+      const handleSubmit = async (event) => {
         event.preventDefault();
-        // Add your login logic here
-        console.log('Username:', username);
-        console.log('Password:', password);
-        console.log("Email", email);
-        console.log("Gender: ", gender);
-        console.log("Confirm pass word: ", confirmPassword);
-        // You can perform your login authentication here
-        // For simplicity, I'm just logging the username and password to the console
-        // You should replace this with your actual authentication logic
-        // Once authenticated, you can close the modal
-        onClose();
+        const User = {
+          name,
+          email,
+          passwordHash: password,
+          sex:gender ==="male"? 0:1,
+        }
+
+        // console.log("Registration object", User);
+        try{
+          await registerUser(User)
+           // onClose();
+          // registration was successful
+        }catch(error) {
+          setError('Coudn\'t registe. Try again later');
+          console.log(error);
+        }
       };
 
     return (
@@ -51,7 +59,7 @@ const RegisterModal = ({isOpen, onClose}) =>{
                     <h2>Register account</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="container">
-                    <input type="text" id="uname" placeholder="Name" value={username} onChange={handleUsernameChange} required />
+                    <input type="text" id="uname" placeholder="Name" value={name} onChange={handleUsernameChange} required />
                     <br></br>
                     <input type="email" id="email" placeholder="Email" value={email} onChange={handleEmailChange} required />
                     <br></br>
@@ -65,6 +73,7 @@ const RegisterModal = ({isOpen, onClose}) =>{
                     <input type="password" id="psw-conf" placeholder="Confirm password" value={confirmPassword} onChange={handlePasswordConfChange} required />
                     <br></br>
                     <button className={style.bt} type="submit">Register</button>
+                    {error && <p style={{ color: 'green' }}>{error}</p>}
                     </div>
                 </form>
                 </div>
